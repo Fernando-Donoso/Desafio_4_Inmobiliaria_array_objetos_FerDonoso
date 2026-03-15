@@ -1,4 +1,4 @@
-const propiedades_venta = [
+const propiedades_ventas = [
   {
     nombre: 'Propiedad 1, Casa en Nueva York',
     src: 'https://fotos.perfil.com/2018/09/21/trim/950/534/nueva-york-09212018-366965.jpg',
@@ -45,7 +45,7 @@ const contenedor = document.querySelector("#contenedor-propiedades");
 
 const renderPropiedades = () => {
 let template = "";
-for (let ventas of propiedades_venta) {
+for (let ventas of propiedades_ventas) {
   template += `
         <div class="col-md-4 mb-4">
             <div class="card">
@@ -67,11 +67,13 @@ for (let ventas of propiedades_venta) {
                   <i class="fas fa-bed"></i>  ${ventas.habitaciones}  Habitaciones 
                 </p>
                 <p><i class="fas fa-dollar-sign"></i> ${ventas.costo.toLocaleString()}</p>
-                <p class="text-danger">
-                  <i class="fas fa-smoking-ban"></i> ${ventas.smoke === false ? 'No se permite fumar' : 'Se permite fumar'}
+                <p class="${ventas.smoke ? 'text-success' : 'text-danger'}">
+                    <i class="${ventas.smoke ? 'fas fa-smoking' : 'fas fa-smoking-ban'}"></i>
+                    ${ventas.smoke ? 'Se permite fumar' : 'No se permite fumar'}
                 </p>
-                <p class="text-danger">
-                  <i class="fa-solid fa-ban"></i> ${ventas.pets === false ? 'No se permiten mascotas' : 'Se permiten mascotas'}
+                <p class="${ventas.pets ? 'text-success' : 'text-danger'}">
+                    <i class="${ventas.pets ? 'fa-solid fa-paw' : 'fa-solid fa-ban'}"></i>
+                    ${ventas.pets ? 'Se permiten mascotas' : 'No se permiten mascotas'}
                 </p>
               </div>
             </div>

@@ -67,11 +67,13 @@ for (let alquiler of propiedades_alquiler) {
                   <i class="fas fa-bed"></i>  ${alquiler.habitaciones}  Habitaciones 
                 </p>
                 <p><i class="fas fa-dollar-sign"></i> ${alquiler.costo.toLocaleString()}</p>
-                <p class="text-danger">
-                  <i class="fas fa-smoking-ban"></i> ${alquiler.smoke === false ? 'No se permite fumar' : 'Se permite fumar'}
+                <p class="${alquiler.smoke ? 'text-success' : 'text-danger'}">
+                    <i class="${alquiler.smoke ? 'fas fa-smoking' : 'fas fa-smoking-ban'}"></i>
+                    ${alquiler.smoke ? 'Se permite fumar' : 'No se permite fumar'}
                 </p>
-                <p class="text-danger">
-                  <i class="fa-solid fa-ban"></i> ${alquiler.pets === false ? 'No se permiten mascotas' : 'Se permiten mascotas'}
+                <p class="${alquiler.pets ? 'text-success' : 'text-danger'}">
+                    <i class="${alquiler.pets ? 'fa-solid fa-paw' : 'fa-solid fa-ban'}"></i>
+                    ${alquiler.pets ? 'Se permiten mascotas' : 'No se permiten mascotas'}
                 </p>
               </div>
             </div>
