@@ -17,3 +17,18 @@
 .card img{
     height: 250px;
 }
+
+
+#contenedor-propiedades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-top: auto;
+}
