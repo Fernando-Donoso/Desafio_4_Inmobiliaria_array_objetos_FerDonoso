@@ -27,7 +27,13 @@
     padding: 20px;
 }
 
-h2 {
+.titulo_venta {
+    text-align: center;
+    margin-top: 20px;
+    margin-top: auto;
+}
+
+.titulo_alquiler {
     text-align: center;
     margin-top: 20px;
     margin-top: auto;

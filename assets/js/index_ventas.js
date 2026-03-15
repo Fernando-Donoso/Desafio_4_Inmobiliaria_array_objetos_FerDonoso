@@ -63,9 +63,6 @@ for (let ventas of propiedades_venta) {
                 </p>
                 <p>
                   <i class="fas fa-map-marker-alt"></i> ${ventas.ubicacion}
-                </p>
-                  residencial
-                </p>
                 <p>
                   <i class="fas fa-bed"></i>  ${ventas.habitaciones}  Habitaciones 
                 </p>
@@ -81,6 +78,7 @@ for (let ventas of propiedades_venta) {
         </div>
   `;
 } 
+
 contenedor.innerHTML = template;
 };
 renderPropiedades();
