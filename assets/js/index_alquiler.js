@@ -7,7 +7,7 @@ const propiedades_alquiler = [
     habitaciones: 4,
     costo: 500000,
     smoke: false,
-    pets: true
+    pets: false
   },
   {
     nombre: 'Alquiler 2, Departamento frente al mar en Miami',
@@ -26,8 +26,8 @@ const propiedades_alquiler = [
     ubicacion: '',
     habitaciones: 2,
     costo: 800000,
-    smoke: false,
-    pets: true
+    smoke: true,
+    pets: false
   },
   {
     nombre: 'Alquiler 4, Departamento moderno en el centro de la ciudad',
@@ -37,7 +37,7 @@ const propiedades_alquiler = [
     habitaciones: 3,
     costo: 1600000,
     smoke: true,
-    pets: false
+    pets: true
   }
 ];
 
@@ -68,10 +68,10 @@ for (let alquiler of propiedades_alquiler) {
                 </p>
                 <p><i class="fas fa-dollar-sign"></i> ${alquiler.costo.toLocaleString()}</p>
                 <p class="text-danger">
-                  <i class="fas fa-smoking-ban"></i> No se permite fumar
+                  <i class="fas fa-smoking-ban"></i> ${alquiler.smoke === false ? 'No se permite fumar' : 'Se permite fumar'}
                 </p>
                 <p class="text-danger">
-                  <i class="fa-solid fa-ban"></i> No se permiten mascotas
+                  <i class="fa-solid fa-ban"></i> ${alquiler.pets === false ? 'No se permiten mascotas' : 'Se permiten mascotas'}
                 </p>
               </div>
             </div>

@@ -6,8 +6,8 @@ const propiedades_venta = [
     ubicacion: '',
     habitaciones: 4,
     costo: 500000,
-    smoke: false,
-    pets: true
+    smoke: true,
+    pets: false
   },
   {
     nombre: 'Propiedad 2, Casa en las montañas, cerca de un lago',
@@ -37,7 +37,7 @@ const propiedades_venta = [
     habitaciones: 3,
     costo: 1600000,
     smoke: true,
-    pets: false
+    pets: true
   }
 ];
 
@@ -68,10 +68,10 @@ for (let ventas of propiedades_venta) {
                 </p>
                 <p><i class="fas fa-dollar-sign"></i> ${ventas.costo.toLocaleString()}</p>
                 <p class="text-danger">
-                  <i class="fas fa-smoking-ban"></i> No se permite fumar
+                  <i class="fas fa-smoking-ban"></i> ${ventas.smoke === false ? 'No se permite fumar' : 'Se permite fumar'}
                 </p>
                 <p class="text-danger">
-                  <i class="fa-solid fa-ban"></i> No se permiten mascotas
+                  <i class="fa-solid fa-ban"></i> ${ventas.pets === false ? 'No se permiten mascotas' : 'Se permiten mascotas'}
                 </p>
               </div>
             </div>
